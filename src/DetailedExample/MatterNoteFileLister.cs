@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace DetailedExample {
 
-    //This class returns items that are children of a "Matter Note Folder"
+    /// <summary>
+    /// This class returns items that are children of a "Matter Note Folder"
+    /// </summary>
     [ListerFor(typeof(MatterNoteFolder))]
     public class MatterNoteFileLister : ListerSync {
         protected override void GetChildren(WebDavContext Context, FileSystemFolder Parent, List<FileSystemObject> Output) {

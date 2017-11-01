@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DetailedExample {
 
-    [System.Configuration.SettingsProvider(typeof(AlphaDrive.SettingsProvider))]
+    [System.Configuration.SettingsProvider(typeof(AlphaDrive.SettingsProvider))] //<=== This is important!  Read Below.
     partial class Settings {
         
         /*

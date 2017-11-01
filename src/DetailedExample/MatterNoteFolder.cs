@@ -8,9 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DetailedExample {
+
+    /// <summary>
+    /// This class defines the operations for the MatterNoteFolder.
+    /// </summary>
     public class MatterNoteFolder : FileSystemFolder {
         
-        //This class defines the operations for the MatterNoteFolder.
         public MatterNoteFolder(WebDavContext Context, FileSystemFolder Parent) : base(Context, Parent) {
 
         }

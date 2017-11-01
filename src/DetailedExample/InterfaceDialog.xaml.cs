@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace DetailedExample {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// There is nothin special about this dialog.  It is just here to show that you can pop one up.
     /// </summary>
     public partial class InterfaceDialog : Window {
         public InterfaceDialog() {

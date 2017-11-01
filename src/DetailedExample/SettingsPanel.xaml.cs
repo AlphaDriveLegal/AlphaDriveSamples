@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 
 namespace DetailedExample {
     /// <summary>
-    /// Interaction logic for SettingsPanel.xaml
+    /// This control will allow us to expose a settings panel through the windows interface.
     /// </summary>
     /// 
-    [AlphaDrive.Windows.Controls.Sort(ExtensionPriorities.Settings)]
+    [AlphaDrive.Windows.Controls.Sort(ExtensionPriorities.Settings)] //Set the priority of where this will show up.
     [System.ComponentModel.DesignTimeVisible(false)] //We don't want this control to show up in the VS toolbox.
     public partial class SettingsPanel : AlphaDrive.Windows.Controls.SettingsControl {
         public SettingsPanel() {

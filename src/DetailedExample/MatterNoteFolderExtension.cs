@@ -13,7 +13,25 @@ namespace DetailedExample {
     /// </summary>
     /// 
     [StartupExtensionOptions(StartupPriority: ExtensionPriorities.MatterNoteFolderExtension)]
-    class MatterNoteFolderExtension : AlphaDrive.StartupExtension {
+    public class MatterNoteFolderExtension : AlphaDrive.StartupExtension {
+
+        /*
+            Extensions go through four different phases
+            1.  All Extensions get Created (constructor).
+            2.  All Extensions get Initialized.
+            3.  All Extensions get Started.
+            4.  All Extensions get Shutdown.
+
+            The Initialize step is where extensions should attach to other extensions.
+            It is before heavy lifting code has really started running.
+ 
+            The Startup step is where the component starts doing actual work.
+
+            The Shutdown step is called when AlphaDrive is shutting down and is the cleanup step.
+       
+             */
+
+
         protected override Task<bool> Initialize(StartupExtension ThisExtension) {
 
             var Extension = AlphaDrive.Application.Extension<AlphaDrive.Data.Connectivity.ConnectivityExtension>();
@@ -21,6 +39,10 @@ namespace DetailedExample {
             Extension.ShouldPreloadApiEvent += this.Extension_ShouldPreloadApiEvent;
             Extension.ShouldRefreshApiEvent += this.Extension_ShouldPreloadApiEvent;
 
+            return Success;
+        }
+
+        protected override Task<bool> Startup(StartupExtension ThisExtension) {
             return Success;
         }
 

@@ -15,7 +15,11 @@ using System.Windows.Shapes;
 
 namespace DetailedExample {
     /// <summary>
-    /// Interaction logic for InterfaceDesigner.xaml
+    /// The InterfaceDesigner.xaml provides a nice surface/container to create our XAML objects and contain our code that
+    /// will get grafted into the UI.  An important thing about the InterfaceDesigner classes is that generally you won't graft
+    /// the entire control into a parent.  In this case, we only graft the items that are children of "SourceContainer".
+    /// If I wanted to graft in multiple components that work together, I should do that through one InterfaceDesigner+InterfaceExtension.
+    /// If I wanted to graft in multiple independent components, I should create an InterfaceDesigner+InterfaceExtension for each one.
     /// </summary>
     public partial class InterfaceDesigner : UserControl {
         public InterfaceDesigner() {
